@@ -2,9 +2,7 @@
   "name": "ingdesoft2",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lourdesgomezsierra/ingdesoft2.git"
@@ -23,5 +21,8 @@
     "playwright": "^1.51.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.1"
   }
 }
