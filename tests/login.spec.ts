@@ -14,7 +14,10 @@ test.describe('Pruebas de Login', () => {
     test('Caso exitoso: ingreso con credenciales válidas', async ({ page }) => {
         await page.goto(`https://sistemacuenca.ucp.edu.ar/alumnosnotas/`);
         await page.getByRole('textbox', { name: 'Usuario' }).fill('123');
-        
+        await page.getByRole('textbox', { name: 'clave inicial' }).fill('p123$');
+        await page.getByRole('textbox', { name: 'Usuario' }).fill('456');
+        await page.getByRole('textbox', { name: 'clave inicial' }).fill('p456$');
+
        /* // Completar el formulario de login
         await page.fill('input[name="dni"]', DNI_VALIDO);
         await page.fill('input[name="password"]', PASS_VALIDO);
