@@ -20,7 +20,6 @@ test.describe('Pruebas de Login', () => {
         await page.getByRole('textbox', { name: 'Usuario' }).fill(DNI_VALIDO);
         await page.getByRole('textbox', { name: 'clave inicial' }).fill(PASS_VALIDO);
         await page.getByRole('button', { name: 'Submit' }).click();
-        await page.pause();
         await context.close();
         await browser.close();
         /*await page.getByRole('textbox', { name: 'Usuario' }).fill('456');
@@ -35,17 +34,10 @@ test.describe('Pruebas de Login', () => {
         const context = await browser.newContext();
 
         await page.goto(`https://sistemacuenca.ucp.edu.ar/alumnosnotas/`);
-        await page.getByRole('textbox', { name: 'Usuario' }).fill('666');
-        await page.getByRole('textbox', { name: 'clave inicial' }).fill('demo');
+        await page.getByRole('textbox', { name: 'Usuario' }).fill(DNI_INVALIDO);
+        await page.getByRole('textbox', { name: 'clave inicial' }).fill(PASS_INVALIDO);
         await page.getByRole('button', { name: 'Submit' }).click();
-        await page.pause();
-        await page.getByRole('textbox', { name: 'Usuario' }).fill('abc');
-        await page.getByRole('textbox', { name: 'clave inicial' }).fill('demo');
-        await page.getByRole('button', { name: 'Submit' }).click();
-        await page.pause();
-
         await context.close();
-        await browser.close();
-        
+        await browser.close();        
 });
 });
